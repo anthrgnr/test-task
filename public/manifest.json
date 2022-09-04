@@ -1,0 +1,15 @@
+{
+  "short_name": "Тест",
+  "name": "Тестовое задание",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "208x208"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
