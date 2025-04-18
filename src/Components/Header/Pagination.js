@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Pagination({
   perPage,
@@ -6,29 +6,29 @@ export default function Pagination({
   setPage,
   currentPageNumber,
 }) {
-  const pageButtons = [];
-  let left = 4;
-  let right = 4;
-  const pagesCount = Math.ceil(countriesCount / perPage);
+  const pageButtons = []
+  let left = 4
+  let right = 4
+  const pagesCount = Math.ceil(countriesCount / perPage)
   if (currentPageNumber > pagesCount) {
-    currentPageNumber = 1;
-    setPage(1);
+    currentPageNumber = 1
+    setPage(1)
   }
 
   for (let i = 1; i <= pagesCount; i++) {
-    pageButtons.push(i);
+    pageButtons.push(i)
   }
   if (currentPageNumber <= right) {
-    right = right * 2 - currentPageNumber + 1;
+    right = right * 2 - currentPageNumber + 1
   }
   if (currentPageNumber > pagesCount - left) {
-    left = left + (currentPageNumber - (pagesCount - left)) - 1;
+    left = left + (currentPageNumber - (pagesCount - left)) - 1
   }
 
   return (
     <div className="field">
       <span className="menu" key={"start"} onClick={() => setPage(1)}>
-        В начало
+        start
       </span>
       {pageButtons
         .filter(
@@ -44,18 +44,18 @@ export default function Pagination({
               >
                 {num}
               </span>
-            );
+            )
           } else {
             return (
               <span className="page" key={num} onClick={() => setPage(num)}>
                 {num}
               </span>
-            );
+            )
           }
         })}
       <span className="menu" key={"end"} onClick={() => setPage(pagesCount)}>
-        В конец
+        end
       </span>
     </div>
-  );
+  )
 }

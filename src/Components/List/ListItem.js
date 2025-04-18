@@ -7,7 +7,7 @@ export default function ListItem(props) {
         <img className="image" src={props.country.flag} alt="Изображение флага" />
       </div>
       <div className="description">
-        <p className="name">Country name: {props.country.name}</p>
+        <p className="name">{props.country.name}</p>
         <p>Population: {props.country.population}</p>
       </div>
     </div>
