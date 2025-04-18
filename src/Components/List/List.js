@@ -1,12 +1,13 @@
-import React from "react";
-import ListItem from "./ListItem";
+import React from "react"
+import ListItem from "./ListItem"
 
-export default function List(props) {
-  return (
-    <div className="news-list">
-      {props.countries.map((element) => {
-        return <ListItem country={element} />;
-      })}
-    </div>
-  );
-}
+const List = ({ countries }) => (
+  <div className="news-list">
+    {countries.map((element, index) => (
+      <ListItem key={index} country={element} />
+    ))
+    }
+  </div>
+)
+
+export default List
